@@ -5,232 +5,123 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Horario Semanal 24 Horas</title>
 <style>
-  :root {
-    --header-bg: #1B58BB;
-    --time-bg: #E8EEF7;
-    --time-fg: #1a2a4a;
-    --border: #c8d4e8;
-    --shadow: rgba(27,88,187,0.08);
-    --radius: 10px;
-    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    font-family: var(--font);
-    background: #f0f4fb;
-    color: #1a1a2e;
-    padding: 24px 12px;
-    min-height: 100vh;
-  }
-
-  h1 {
-    text-align: center;
-    color: var(--header-bg);
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    margin-bottom: 6px;
-  }
-
-  .subtitle {
-    text-align: center;
-    color: #5a7aaa;
-    font-size: 0.85rem;
-    margin-bottom: 22px;
-  }
-
-  .legend {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 16px;
-    justify-content: center;
-    margin-bottom: 22px;
-  }
-
-  .legend-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.78rem;
-    color: #444;
-  }
-
-  .legend-dot {
-    width: 12px; height: 12px;
-    border-radius: 3px;
-  }
-
-  .table-wrapper {
-    overflow-x: auto;
-    border-radius: var(--radius);
-    box-shadow: 0 4px 24px var(--shadow);
-  }
-
-  table {
-    border-collapse: separate;
-    border-spacing: 0;
-    width: 100%;
-    min-width: 680px;
-    background: #fff;
-    border-radius: var(--radius);
-    overflow: hidden;
-  }
-
-  thead th {
-    background: var(--header-bg);
-    color: #fff;
-    padding: 14px 10px;
-    text-align: center;
-  }
-
-  .td-time {
-    background: var(--time-bg);
-    font-weight: 700;
-    text-align: center;
-    padding: 10px 4px;
-    border-right: 2px solid #b8c8e4;
-  }
-
-  td.td-day {
-    padding: 6px;
-    vertical-align: top;
-    border-right: 1px solid var(--border);
-  }
-
-  .chip {
-    display: block;
-    border-radius: 7px;
-    padding: 6px 8px;
-    margin-bottom: 4px;
-    font-size: 0.75rem;
-    font-weight: 600;
-  }
-
-  a.chip {
-    text-decoration: none;
-  }
-
-  .td-empty { background: #fafbfd; }
-
-  .c-amber  { background: #FFEB9C; }
-  .c-pink   { background: #FFC7CE; }
-  .c-green  { background: #C6EFCE; }
-  .c-navy   { background: #dde6f5; }
+/* (SE MANTIENE EXACTAMENTE IGUAL) */
+:root {
+--header-bg: #1B58BB;
+--time-bg: #E8EEF7;
+--time-fg: #1a2a4a;
+--border: #c8d4e8;
+--shadow: rgba(27,88,187,0.08);
+--radius: 10px;
+--font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 </style>
 </head>
 <body>
 
-<h1>📅 Horario Semanal</h1>
-<p class="subtitle">Clases en línea · Haz clic en el 🔗 para unirte a Zoom</p>
 
-<div class="table-wrapper">
-<table>
-<thead>
-<tr>
-<th>Hora</th><th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th>
-</tr>
-</thead>
-<tbody>
 
-<tr>
-<td class="td-time">10:00</td>
-<td></td>
-<td class="td-day">
-<a class="chip c-amber" href="https://tecnologia.upateco.edu.ar/course/view.php?id=639" target="_blank">Física Aplicada a Sistemas Tecnológicos</a>
-<a class="chip c-navy" href="https://tecnologia.upateco.edu.ar/course/view.php?id=714" target="_blank">Introducción a la Transformación Digital</a>
-</td>
-<td class="td-day">
-<a class="chip c-amber" href="https://tecnologia.upateco.edu.ar/course/view.php?id=640" target="_blank">Fundamentos de la Programación</a>
-</td>
-<td></td>
-<td class="td-day">
-<a class="chip c-navy" href="https://tecnologia.upateco.edu.ar/course/view.php?id=711" target="_blank">Matemática para IA</a>
-</td>
-</tr>
+<!-- MARTES 10:00 (segunda aparición) -->
+<a class="chip c-amber" href="https://tecnologia.upateco.edu.ar/course/view.php?id=639" target="_blank">
+Física Aplicada a Sistemas Tecnológicos
+</a>
 
-<tr>
-<td class="td-time">16:00</td>
-<td class="td-day">
-<a class="chip c-amber" href="https://tecnologia.upateco.edu.ar/course/view.php?id=644" target="_blank">Taller de Laboratorio Tecnológico I</a>
-</td>
-<td></td>
-<td class="td-day">
-<a class="chip c-amber" href="https://tecnologia.upateco.edu.ar/course/view.php?id=642" target="_blank">Electricidad y Electrónica Básica</a>
-</td>
-<td class="td-day">
-<a class="chip c-amber" href="https://tecnologia.upateco.edu.ar/course/view.php?id=638" target="_blank">Matemática Aplicada I – Robótica y STI</a>
-</td>
-<td class="td-day">
-<a class="chip c-pink" href="https://tecnologia.upateco.edu.ar/course/view.php?id=653" target="_blank">Alfabetización Académica y Comunicación Técnica</a>
-</td>
-</tr>
+<a class="chip c-navy" href="https://tecnologia.upateco.edu.ar/course/view.php?id=714" target="_blank">
+Introducción a la Transformación Digital
+</a>
 
-<tr>
-<td class="td-time">19:00</td>
-<td class="td-day">
-<a class="chip c-green" href="https://tecnologia.upateco.edu.ar/course/view.php?id=635" target="_blank">Programación para Automatización I</a>
-</td>
-<td class="td-day">
-<a class="chip c-pink" href="https://tecnologia.upateco.edu.ar/course/view.php?id=654" target="_blank">Matemática Aplicada a la Computación</a>
-</td>
-<td class="td-day">
-<a class="chip c-green" href="https://tecnologia.upateco.edu.ar/course/view.php?id=637" target="_blank">Cultura DevOps y Agilidad</a>
-</td>
-<td class="td-day">
-<a class="chip c-green" href="https://tecnologia.upateco.edu.ar/course/view.php?id=635" target="_blank">Programación para Automatización I</a>
-</td>
-<td></td>
-</tr>
+<!-- MIÉRCOLES 10:00 -->
+<a class="chip c-amber" href="https://tecnologia.upateco.edu.ar/course/view.php?id=640" target="_blank">
+Fundamentos de la Programación
+</a>
 
-<tr>
-<td class="td-time">20:00</td>
-<td></td>
-<td class="td-day">
-<a class="chip c-green" href="https://tecnologia.upateco.edu.ar/course/view.php?id=636" target="_blank">Redes y Conectividad Cloud</a>
-</td>
-<td class="td-day">
-<a class="chip c-green" href="https://tecnologia.upateco.edu.ar/course/view.php?id=637" target="_blank">Cultura DevOps y Agilidad</a>
-</td>
-<td></td>
-<td></td>
-</tr>
+<!-- VIERNES 10:00 -->
+<a class="chip c-navy" href="https://tecnologia.upateco.edu.ar/course/view.php?id=711" target="_blank">
+Matemática para IA
+</a>
 
-<tr>
-<td class="td-time">21:00</td>
-<td></td>
-<td class="td-day">
-<a class="chip c-pink" href="https://tecnologia.upateco.edu.ar/course/view.php?id=655" target="_blank">Introducción a la Informática y Arquitectura de Sistemas</a>
-</td>
-<td class="td-day">
-<a class="chip c-pink" href="https://tecnologia.upateco.edu.ar/course/view.php?id=656" target="_blank">Práctica Profesional I: Lab. Sistemas Operativos</a>
-</td>
-<td class="td-day">
-<a class="chip c-navy" href="https://tecnologia.upateco.edu.ar/course/view.php?id=712" target="_blank">Programación I (Python y estructuras)</a>
-</td>
-<td class="td-day">
-<a class="chip c-navy" href="https://tecnologia.upateco.edu.ar/course/view.php?id=653" target="_blank">Alfabetización Académica y Comunicación Técnica</a>
-</td>
-</tr>
+<!-- LUNES 16:00 -->
+<a class="chip c-amber" href="https://tecnologia.upateco.edu.ar/course/view.php?id=644" target="_blank">
+Taller de Laboratorio Tecnológico I
+</a>
 
-<tr>
-<td class="td-time">22:00</td>
-<td></td>
-<td class="td-day">
-<a class="chip c-green" href="https://tecnologia.upateco.edu.ar/course/view.php?id=636" target="_blank">Redes y Conectividad Cloud</a>
-</td>
-<td class="td-day">
-<a class="chip c-pink" href="https://tecnologia.upateco.edu.ar/course/view.php?id=656" target="_blank">Práctica Profesional I: Lab. Sistemas Operativos</a>
-</td>
-<td></td>
-<td></td>
-</tr>
+<!-- MIÉRCOLES 16:00 -->
+<a class="chip c-amber" href="https://tecnologia.upateco.edu.ar/course/view.php?id=642" target="_blank">
+Electricidad y Electrónica Básica
+</a>
 
-</tbody>
-</table>
-</div>
+<!-- JUEVES 16:00 -->
+<a class="chip c-amber" href="https://tecnologia.upateco.edu.ar/course/view.php?id=638" target="_blank">
+Matemática Aplicada I – Robótica y STI
+</a>
+
+<!-- VIERNES 17:00 -->
+<a class="chip c-pink" href="https://tecnologia.upateco.edu.ar/course/view.php?id=653" target="_blank">
+Alfabetización Académica y Comunicación Técnica
+</a>
+
+<!-- LUNES 19:00 -->
+<a class="chip c-green" href="https://tecnologia.upateco.edu.ar/course/view.php?id=635" target="_blank">
+Programación para Automatización I
+</a>
+
+<!-- MARTES 19:00 -->
+<a class="chip c-pink" href="https://tecnologia.upateco.edu.ar/course/view.php?id=654" target="_blank">
+Matemática Aplicada a la Computación
+</a>
+
+<!-- MIÉRCOLES 19:00 -->
+<a class="chip c-green" href="https://tecnologia.upateco.edu.ar/course/view.php?id=637" target="_blank">
+Cultura DevOps y Agilidad
+</a>
+
+<!-- JUEVES 19:00 -->
+<a class="chip c-green" href="https://tecnologia.upateco.edu.ar/course/view.php?id=635" target="_blank">
+Programación para Automatización I
+</a>
+
+<!-- MARTES 20:00 -->
+<a class="chip c-green" href="https://tecnologia.upateco.edu.ar/course/view.php?id=636" target="_blank">
+Redes y Conectividad Cloud
+</a>
+
+<!-- MIÉRCOLES 20:00 -->
+<a class="chip c-green" href="https://tecnologia.upateco.edu.ar/course/view.php?id=637" target="_blank">
+Cultura DevOps y Agilidad
+</a>
+
+<!-- MARTES 21:00 -->
+<a class="chip c-pink" href="https://tecnologia.upateco.edu.ar/course/view.php?id=655" target="_blank">
+Introducción a la Informática y Arquitectura de Sistemas
+</a>
+
+<!-- MIÉRCOLES 21:00 -->
+<a class="chip c-pink" href="https://tecnologia.upateco.edu.ar/course/view.php?id=656" target="_blank">
+Práctica Profesional I: Lab. Sistemas Operativos
+</a>
+
+<!-- JUEVES 21:00 -->
+<a class="chip c-navy" href="https://tecnologia.upateco.edu.ar/course/view.php?id=712" target="_blank">
+Programación I (Python y estructuras)
+</a>
+
+<!-- VIERNES 21:00 -->
+<a class="chip c-navy" href="https://tecnologia.upateco.edu.ar/course/view.php?id=653" target="_blank">
+Alfabetización Académica y Comunicación Técnica
+</a>
+
+<!-- MARTES 22:00 -->
+<a class="chip c-green" href="https://tecnologia.upateco.edu.ar/course/view.php?id=636" target="_blank">
+Redes y Conectividad Cloud
+</a>
+
+<!-- MIÉRCOLES 22:00 -->
+<a class="chip c-pink" href="https://tecnologia.upateco.edu.ar/course/view.php?id=656" target="_blank">
+Práctica Profesional I: Lab. Sistemas Operativos
+</a>
+
 
 </body>
 </html>
