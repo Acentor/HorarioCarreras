@@ -98,7 +98,6 @@
   }
   tbody tr:last-child { border-bottom: none; }
 
-  /* Time cell */
   .td-time {
     background: var(--time-bg);
     color: var(--time-fg);
@@ -113,11 +112,8 @@
     min-width: 60px;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
-    border-collapse: collapse;
-}
   }
 
-  /* Day cell */
   td.td-day {
     padding: 6px;
     vertical-align: top;
@@ -125,7 +121,6 @@
   }
   td.td-day:last-child { border-right: none; }
 
-  /* Course chip */
   .chip {
     display: block;
     border-radius: 7px;
@@ -152,57 +147,14 @@
     opacity: 0.7;
   }
 
-  /* Empty cell */
   .td-empty { background: #fafbfd; }
 
-  /* ── Color classes from Excel ────────────────────────── */
   .c-amber  { background: #FFEB9C; color: #9C5700; }
   .c-pink   { background: #FFC7CE; color: #9C0006; }
   .c-green  { background: #C6EFCE; color: #006100; }
   .c-navy   { background: #dde6f5; color: #17375E; }
   .c-default{ background: #eef2f9; color: #1a2a4a; }
 
-  /* ── Legend section ─────────────────────────────────── */
-  .section-legend {
-    margin-top: 22px;
-    background: #fff;
-    border-radius: var(--radius);
-    box-shadow: 0 2px 12px var(--shadow);
-    padding: 16px 20px;
-  }
-  .section-legend h2 {
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: var(--header-bg);
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  .legend-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 8px;
-  }
-  .legend-entry {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.78rem;
-    color: #333;
-  }
-  .legend-swatch {
-    width: 14px; height: 14px;
-    border-radius: 4px;
-    flex-shrink: 0;
-  }
-  .note {
-    margin-top: 12px;
-    font-size: 0.75rem;
-    color: #777;
-    font-style: italic;
-  }
-
-  /* ── Responsive ──────────────────────────────────────── */
   @media (max-width: 600px) {
     body { padding: 12px 6px; }
     .chip { font-size: 0.7rem; padding: 5px 6px; }
@@ -213,9 +165,8 @@
 <body>
 
 <h1>📅 Horario Semanal</h1>
-<p class="subtitle">Clases en línea · Haz clic en el 🔗 para unirte a Zoom</p>
+<p class="subtitle">Clases en línea · Haz clic en el 🔗 para unirte a Zoom o al Aula Virtual</p>
 
-<!-- Color legend -->
 <div class="legend">
   <div class="legend-item"><span class="legend-dot" style="background:#FFEB9C;border:1px solid #c8a000"></span>Robotica y Sistemas Tecnológicos Industriales</div>
   <div class="legend-item"><span class="legend-dot" style="background:#FFC7CE;border:1px solid #c00010"></span>Ciberseguridad y Protección de Sistemas Digitales</div>
@@ -237,7 +188,6 @@
   </thead>
   <tbody>
 
-    <!-- 09:00 -->
     <tr>
       <td class="td-time">09:00</td>
       <td class="td-day td-empty"></td>
@@ -254,24 +204,22 @@
       </td>
     </tr>
 
-    <!-- 10:00 -->
     <tr>
       <td class="td-time">10:00</td>
       <td class="td-day td-empty"></td>
       <td class="td-day">
-        <span class="chip c-amber">Física Aplicada a Sistemas Tecnológicos</span>
-        <span class="chip c-navy">Introducción a la Transformación Digital</span>
+        <a class="chip c-amber" href="https://tecnologia.upateco.edu.ar/course/view.php?id=639" target="_blank">Física Aplicada a Sistemas Tecnológicos</a>
+        <a class="chip c-navy" href="https://tecnologia.upateco.edu.ar/course/view.php?id=714" target="_blank">Introducción a la Transformación Digital</a>
       </td>
       <td class="td-day">
-        <span class="chip c-amber">Fundamentos de la Programación</span>
+        <a class="chip c-amber" href="https://tecnologia.upateco.edu.ar/course/view.php?id=640" target="_blank">Fundamentos de la Programación</a>
       </td>
       <td class="td-day td-empty"></td>
       <td class="td-day">
-        <span class="chip c-navy">Matemática para IA</span>
+        <a class="chip c-navy" href="https://tecnologia.upateco.edu.ar/course/view.php?id=711" target="_blank">Matemática para IA</a>
       </td>
     </tr>
 
-    <!-- 11:00 -->
     <tr>
       <td class="td-time">11:00</td>
       <td class="td-day td-empty"></td>
@@ -288,7 +236,6 @@
       </td>
     </tr>
 
-    <!-- 12:00 -->
     <tr>
       <td class="td-time">12:00</td>
       <td class="td-day td-empty"></td>
@@ -302,7 +249,6 @@
       <td class="td-day td-empty"></td>
     </tr>
 
-    <!-- 15:00 -->
     <tr>
       <td class="td-time">15:00</td>
       <td class="td-day">
@@ -318,25 +264,23 @@
       <td class="td-day td-empty"></td>
     </tr>
 
-    <!-- 16:00 -->
     <tr>
       <td class="td-time">16:00</td>
       <td class="td-day">
-        <span class="chip c-amber">Taller de Laboratorio Tecnológico I</span>
+        <a class="chip c-amber" href="https://tecnologia.upateco.edu.ar/course/view.php?id=644" target="_blank">Taller de Laboratorio Tecnológico I</a>
       </td>
       <td class="td-day td-empty"></td>
       <td class="td-day">
-        <span class="chip c-amber">Electricidad y Electrónica Básica</span>
+        <a class="chip c-amber" href="https://tecnologia.upateco.edu.ar/course/view.php?id=642" target="_blank">Electricidad y Electrónica Básica</a>
       </td>
       <td class="td-day">
-        <span class="chip c-amber">Matemática Aplicada I – Robótica y STI</span>
+        <a class="chip c-amber" href="https://tecnologia.upateco.edu.ar/course/view.php?id=638" target="_blank">Matemática Aplicada I – Robótica y STI</a>
       </td>
       <td class="td-day">
-        <a class="chip c-pink" href="https://us02web.zoom.us/j/85937007638?pwd=fUhGB19tR66lhFEgx8C6kBpfkQW2Dr.1" target="_blank">Alfabetización Académica y Comunicación Técnica</a>
+        <a class="chip c-pink" href="https://us02web.zoom.us/j/85937007638?pwd=fUhGB19tR66lhFEgx8C6kBpfkQW2Dr.1" target="_blank">Alfabetización Académica y Comunicación Técnica Seg</a>
       </td>
     </tr>
 
-    <!-- 17:00 -->
     <tr>
       <td class="td-time">17:00</td>
       <td class="td-day">
@@ -351,11 +295,10 @@
         <span class="chip c-amber">Matemática Aplicada I – Robótica y STI</span>
       </td>
       <td class="td-day">
-        <span class="chip c-pink">Alfabetización Académica y Comunicación Técnica</span>
+        <a class="chip c-pink" href="https://tecnologia.upateco.edu.ar/course/view.php?id=653" target="_blank">Alfabetización Académica y Comunicación Técnica Seg</a>
       </td>
     </tr>
 
-    <!-- 18:00 -->
     <tr>
       <td class="td-time">18:00</td>
       <td class="td-day">
@@ -365,7 +308,7 @@
         <a class="chip c-pink" href="https://us02web.zoom.us/j/81297872702?pwd=LEONoSuwNazRqDj9Uyn5jVrngeFxqw.1" target="_blank">Matemática Aplicada a la Computación</a>
       </td>
       <td class="td-day">
-        <span class="chip c-amber">Matemática Aplicada I – Robótica y STI</span>
+        <a class="chip c-amber" href="https://tecnologia.upateco.edu.ar/course/view.php?id=638" target="_blank">Matemática Aplicada I – Robótica y STI</a>
         <a class="chip c-green" href="https://us02web.zoom.us/j/84832795504?pwd=CAs3C2vSHbGP0C4z8Kj5JYQSqn3HuN.1" target="_blank">Cultura DevOps y Agilidad</a>
       </td>
       <td class="td-day">
@@ -373,32 +316,30 @@
         <a class="chip c-green" href="https://us02web.zoom.us/j/87031934186?pwd=NL61h0DCT7EQo5azWDHm3pYZDpjCwR.1" target="_blank">Programación para Automatización I</a>
       </td>
       <td class="td-day">
-        <span class="chip c-pink">Alfabetización Académica y Comunicación Técnica <small style="opacity:.7">(hasta 18:30)</small></span>
+        <span class="chip c-pink">Alfabetización Académica y Comunicación Técnica Seg<small style="opacity:.7">(hasta 18:30)</small></span>
       </td>
     </tr>
 
-    <!-- 19:00 -->
     <tr>
       <td class="td-time">19:00</td>
       <td class="td-day">
-        <span class="chip c-green">Programación para Automatización I</span>
+        <a class="chip c-green" href="https://tecnologia.upateco.edu.ar/course/view.php?id=635" target="_blank">Programación para Automatización I</a>
       </td>
       <td class="td-day">
-        <span class="chip c-pink">Matemática Aplicada a la Computación</span>
+        <a class="chip c-pink" href="https://tecnologia.upateco.edu.ar/course/view.php?id=654" target="_blank">Matemática Aplicada a la Computación</a>
         <a class="chip c-green" href="https://us02web.zoom.us/j/84049995467?pwd=JiRPfK99UOElZ16dFdA19389jhWxEa.1" target="_blank">Redes y Conectividad Cloud</a>
       </td>
       <td class="td-day">
         <span class="chip c-amber">Matemática Aplicada I – Robótica y STI</span>
-        <span class="chip c-green">Cultura DevOps y Agilidad</span>
+        <a class="chip c-green" href="https://tecnologia.upateco.edu.ar/course/view.php?id=637" target="_blank">Cultura DevOps y Agilidad</a>
       </td>
       <td class="td-day">
-        <span class="chip c-pink">Matemática Aplicada a la Computación</span>
-        <span class="chip c-green">Programación para Automatización I</span>
+        <a class="chip c-pink" href="https://tecnologia.upateco.edu.ar/course/view.php?id=654" target="_blank">Matemática Aplicada a la Computación</a>
+        <a class="chip c-green" href="https://tecnologia.upateco.edu.ar/course/view.php?id=635" target="_blank">Programación para Automatización I</a>
       </td>
       <td class="td-day td-empty"></td>
     </tr>
 
-    <!-- 20:00 -->
     <tr>
       <td class="td-time">20:00</td>
       <td class="td-day">
@@ -407,7 +348,7 @@
       <td class="td-day">
         <span class="chip c-pink">Matemática Aplicada a la Computación</span>
         <a class="chip c-pink" href="https://us02web.zoom.us/j/83390237157?pwd=Inp8cAQbk0WbQjhkX43rwoIz5xX1R5.1" target="_blank">Introducción a la Informática y Arquitectura de Sistemas</a>
-        <span class="chip c-green">Redes y Conectividad Cloud</span>
+        <a class="chip c-green" href="https://tecnologia.upateco.edu.ar/course/view.php?id=636" target="_blank">Redes y Conectividad Cloud</a>
       </td>
       <td class="td-day">
         <span class="chip c-green">Cultura DevOps y Agilidad</span>
@@ -421,33 +362,31 @@
       </td>
       <td class="td-day">
         <a class="chip c-pink" href="https://us02web.zoom.us/j/83390237157?pwd=Inp8cAQbk0WbQjhkX43rwoIz5xX1R5.1" target="_blank">Introducción a la Informática y Arquitectura de Sistemas</a>
-        <a class="chip c-navy" href="https://us02web.zoom.us/j/89268999496?pwd=vz5BsuXO6pLyr589usaPgUjL2yBTnw.1" target="_blank">Alfabetización Académica y Comunicación Técnica</a>
+        <a class="chip c-navy" href="https://us02web.zoom.us/j/89268999496?pwd=vz5BsuXO6pLyr589usaPgUjL2yBTnw.1" target="_blank">Alfabetización Académica y Comunicación Técnica IA</a>
       </td>
     </tr>
 
-    <!-- 21:00 -->
     <tr>
       <td class="td-time">21:00</td>
       <td class="td-day td-empty"></td>
       <td class="td-day">
-        <span class="chip c-pink">Introducción a la Informática y Arquitectura de Sistemas</span>
+        <a class="chip c-pink" href="https://tecnologia.upateco.edu.ar/course/view.php?id=655" target="_blank">Introducción a la Informática y Arquitectura de Sistemas</a>
         <span class="chip c-green">Redes y Conectividad Cloud</span>
       </td>
       <td class="td-day">
         <span class="chip c-green">Cultura DevOps y Agilidad</span>
-        <span class="chip c-pink">Práctica Profesional I: Lab. Sistemas Operativos</span>
+        <a class="chip c-pink" href="https://tecnologia.upateco.edu.ar/course/view.php?id=656" target="_blank">Práctica Profesional I: Lab. Sistemas Operativos</a>
       </td>
       <td class="td-day">
-        <span class="chip c-pink">Práctica Profesional I: Lab. Sistemas Operativos</span>
-        <span class="chip c-navy">Programación I (Python y estructuras)</span>
+        <a class="chip c-pink" href="https://tecnologia.upateco.edu.ar/course/view.php?id=656" target="_blank">Práctica Profesional I: Lab. Sistemas Operativos</a>
+        <a class="chip c-navy" href="https://tecnologia.upateco.edu.ar/course/view.php?id=712" target="_blank">Programación I (Python y estructuras)</a>
       </td>
       <td class="td-day">
-        <span class="chip c-pink">Introducción a la Informática y Arquitectura de Sistemas</span>
-        <span class="chip c-navy">Alfabetización Académica y Comunicación Técnica</span>
+        <a class="chip c-pink" href="https://tecnologia.upateco.edu.ar/course/view.php?id=655" target="_blank">Introducción a la Informática y Arquitectura de Sistemas</a>
+        <a class="chip c-navy" href="https://tecnologia.upateco.edu.ar/course/view.php?id=713" target="_blank">Alfabetización Académica y Comunicación Técnica IA</a>
       </td>
     </tr>
 
-    <!-- 22:00 -->
     <tr>
       <td class="td-time">22:00</td>
       <td class="td-day td-empty"></td>
@@ -464,14 +403,13 @@
       </td>
       <td class="td-day">
         <span class="chip c-pink">Introducción a la Informática y Arquitectura de Sistemas</span>
-        <span class="chip c-navy">Alfabetización Académica y Comunicación Técnica</span>
+        <span class="chip c-navy">Alfabetización Académica y Comunicación Técnica IA</span>
       </td>
     </tr>
 
   </tbody>
 </table>
 </div>
-
 
 </body>
 </html>
