@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Horario Semanal - 2º Cuatrimestre 2026</title>
+<title>Horario Semanal - Nuevo Cuatrimestre</title>
 <style>
   :root {
     --header-bg: #1B58BB;
@@ -61,25 +61,25 @@
     flex-shrink: 0;
   }
 
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  border-radius: var(--radius);
-  box-shadow: 0 4px 24px var(--shadow);
-  margin-bottom: 20px;
-  position: relative;
-}
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 24px var(--shadow);
+    margin-bottom: 20px;
+    position: relative;
+  }
 
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-  width: 100%;
-  min-width: 800px;
-  background: #fff;
-  table-layout: fixed;
-}
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    min-width: 800px;
+    background: #fff;
+    table-layout: fixed;
+  }
 
   thead tr th {
     background: var(--header-bg);
@@ -155,7 +155,6 @@ table {
   .c-green  { background: #C6EFCE; color: #006100; }
   .c-navy   { background: #dde6f5; color: #17375E; }
   .c-default{ background: #eef2f9; color: #1a2a4a; }
-    
 
   tbody tr:hover {
     background-color: rgba(0, 0, 0, 0.1); 
@@ -165,27 +164,27 @@ table {
     position: relative;
   }
 
-td.td-day:hover::before {
-  content: "";
-  position: absolute;
-  top: -1000px; 
-  left: 0;
-  width: 100%;
-  height: 2000px; 
-  background-color: rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  pointer-events: none;
-}
+  td.td-day:hover::before {
+    content: "";
+    position: absolute;
+    top: -1000px; 
+    left: 0;
+    width: 100%;
+    height: 2000px; 
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    pointer-events: none;
+  }
 
   td.td-day:hover {
     background-color: rgba(0, 0, 0, 0.06) !important; 
     outline: 1px solid rgba(27, 88, 187, 0.2);
   }
 
-.chip, .td-time {
-  position: relative;
-  z-index: 2;
-}
+  .chip, .td-time {
+    position: relative;
+    z-index: 2;
+  }
 
   .td-time:hover::before {
     display: none;
@@ -193,28 +192,18 @@ td.td-day:hover::before {
 
   @media (max-width: 600px) {
     body { padding: 12px 6px; }
-    .chip { font-size: 0.7rem; padding: 5px 6px; }
-    .td-time { font-size: 0.78rem; padding: 8px 3px; }
-    thead tr th:first-child, .td-time { 
-    width: 60px; 
-    min-width: 60px;
-    font-size: 0.75rem;
-    }
-  
-  .chip { 
-    font-size: 0.7rem; 
-    padding: 4px 6px; 
-  }
+    .chip { font-size: 0.7rem; padding: 4px 6px; }
+    .td-time { font-size: 0.75rem; padding: 8px 3px; width: 60px; min-width: 60px; }
 
-  .table-wrapper::after {
-    content: "← Desliza para ver más →";
-    display: block;
-    text-align: center;
-    font-size: 0.65rem;
-    color: #5a7aaa;
-    padding: 8px;
-    background: #f0f4fb;
-  }
+    .table-wrapper::after {
+      content: "← Desliza para ver más →";
+      display: block;
+      text-align: center;
+      font-size: 0.65rem;
+      color: #5a7aaa;
+      padding: 8px;
+      background: #f0f4fb;
+    }
   }
 </style>
 </head>
@@ -224,7 +213,7 @@ td.td-day:hover::before {
 <p class="subtitle">Clases en línea Zoom y Plataforma · Haz clic en el 🔗 </p>
 
 <div class="legend">
-  <div class="legend-item"><span class="legend-dot" style="background:#FFEB9C;border:1px solid #c8a000"></span>Robotica y Sistemas Tecnológicos Industriales</div>
+  <div class="legend-item"><span class="legend-dot" style="background:#FFEB9C;border:1px solid #c8a000"></span>Robótica y Sistemas Tecnológicos Industriales</div>
   <div class="legend-item"><span class="legend-dot" style="background:#FFC7CE;border:1px solid #c00010"></span>Ciberseguridad y Protección de Sistemas Digitales</div>
   <div class="legend-item"><span class="legend-dot" style="background:#C6EFCE;border:1px solid #009020"></span>Gestión de Infraestructura Cloud y DevOps</div>
   <div class="legend-item"><span class="legend-dot" style="background:#dde6f5;border:1px solid #7090c0"></span>Inteligencia Artificial y Machine Learning</div>
@@ -244,210 +233,269 @@ td.td-day:hover::before {
   </thead>
   <tbody>
 
-    <!-- 08:00 - 09:00 -->
+    <!-- 08:00 -->
     <tr>
       <td class="td-time">08:00</td>
       <td class="td-day td-empty"></td>
       <td class="td-day td-empty"></td>
       <td class="td-day">
-        <a class="chip c-navy" href="#" target="_blank">Estadística Aplicada y Probabilidad</a>
-        <a class="chip c-green" href="https://us02web.zoom.us/j/83706212417?pwd=5YmJSqMfwdt2qyxBeWHxTpNepdK1Am.1" target="_blank">Gestión de Datos y Bases NoSQL <small style="opacity:.7">(08:30-11:30)</small></a>
+        <a class="chip c-amber" href="https://us02web.zoom.us/j/84114710137?pwd=QZILGHb8rl29iDHMT7gwh8n0Rvo6DX.1" target="_blank">Programación para Sistemas Tecnológicos</a>
+        <a class="chip c-navy" href="#">Estadística Aplicada y Probabilidad</a>
       </td>
       <td class="td-day td-empty"></td>
       <td class="td-day td-empty"></td>
     </tr>
 
-    <!-- 09:00 - 10:00 -->
+    <!-- 08:30 -->
+    <tr>
+      <td class="td-time">08:30</td>
+      <td class="td-day td-empty"></td>
+      <td class="td-day td-empty"></td>
+      <td class="td-day">
+        <a class="chip c-green" href="https://us02web.zoom.us/j/83706212417?pwd=5YmJSqMfwdt2qyxBeWHxTpNepdK1Am.1" target="_blank">Gestión de Datos y Bases NoSQL</a>
+        <a class="chip c-amber" href="#">Programación para Sistemas Tecnológicos</a>
+        <span class="chip c-navy">Estadística Aplicada y Probabilidad</span>
+      </td>
+      <td class="td-day td-empty"></td>
+      <td class="td-day td-empty"></td>
+    </tr>
+
+    <!-- 09:00 -->
     <tr>
       <td class="td-time">09:00</td>
       <td class="td-day td-empty"></td>
       <td class="td-day td-empty"></td>
       <td class="td-day">
-        <a class="chip c-navy" href="#" target="_blank">Estadística Aplicada y Probabilidad</a>
-        <a class="chip c-green" href="#" target="_blank">Gestión de Datos y Bases NoSQL</a>
+        <span class="chip c-amber">Programación para Sistemas Tecnológicos</span>
+        <a class="chip c-green" href="#">Gestión de Datos y Bases NoSQL</a>
+        <span class="chip c-navy">Estadística Aplicada y Probabilidad</span>
       </td>
       <td class="td-day">
-        <a class="chip c-navy" href="#" target="_blank">Inglés Técnico I (IA)</a>
+        <a class="chip c-navy" href="#">Inglés Técnico I</a>
       </td>
       <td class="td-day td-empty"></td>
     </tr>
 
-    <!-- 10:00 - 11:00 -->
+    <!-- 10:00 -->
     <tr>
       <td class="td-time">10:00</td>
       <td class="td-day td-empty"></td>
       <td class="td-day td-empty"></td>
       <td class="td-day">
-        <a class="chip c-navy" href="#" target="_blank">Ética y Regulación en IA</a>
-        <a class="chip c-green" href="#" target="_blank">Gestión de Datos y Bases NoSQL</a>
+        <span class="chip c-amber">Programación para Sistemas Tecnológicos <small style="opacity:.7">(hasta 11:00)</small></span>
+        <span class="chip c-green">Gestión de Datos y Bases NoSQL</span>
+        <a class="chip c-navy" href="#">Ética y Regulación en IA</a>
       </td>
       <td class="td-day">
-        <a class="chip c-navy" href="#" target="_blank">Inglés Técnico I (IA)</a>
+        <a class="chip c-navy" href="#">Inglés Técnico I</a>
       </td>
       <td class="td-day td-empty"></td>
     </tr>
 
-    <!-- 11:00 - 12:00 -->
+    <!-- 11:00 -->
     <tr>
       <td class="td-time">11:00</td>
       <td class="td-day td-empty"></td>
       <td class="td-day td-empty"></td>
       <td class="td-day">
-        <a class="chip c-navy" href="#" target="_blank">Ética y Regulación en IA</a>
+        <span class="chip c-green">Gestión de Datos y Bases NoSQL <small style="opacity:.7">(hasta 11:30)</small></span>
+        <a class="chip c-navy" href="#">Ética y Regulación en IA</a>
       </td>
-      <td class="td-day td-empty"></td>
+      <td class="td-day">
+        <span class="chip c-navy">Inglés Técnico I <small style="opacity:.7">(hasta 11:00)</small></span>
+      </td>
       <td class="td-day td-empty"></td>
     </tr>
 
-    <!-- 13:00 - 15:00 -->
+    <!-- 13:00 -->
     <tr>
       <td class="td-time">13:00</td>
       <td class="td-day">
         <a class="chip c-amber" href="https://us02web.zoom.us/j/83412778850?pwd=aFXYDhw4uOlE09K9b2oFxbNZQQU52z.1" target="_blank">Matemática Aplicada II</a>
       </td>
       <td class="td-day">
-        <a class="chip c-amber" href="#" target="_blank">Matemática Aplicada II</a>
+        <a class="chip c-amber" href="https://us02web.zoom.us/j/83412778850?pwd=aFXYDhw4uOlE09K9b2oFxbNZQQU52z.1" target="_blank">Matemática Aplicada II</a>
       </td>
       <td class="td-day td-empty"></td>
       <td class="td-day td-empty"></td>
       <td class="td-day td-empty"></td>
     </tr>
 
-    <!-- 15:00 - 17:00 -->
+    <!-- 14:00 -->
+    <tr>
+      <td class="td-time">14:00</td>
+      <td class="td-day">
+        <a class="chip c-amber" href="#">Matemática Aplicada II</a>
+      </td>
+      <td class="td-day">
+        <a class="chip c-amber" href="#">Matemática Aplicada II</a>
+      </td>
+      <td class="td-day td-empty"></td>
+      <td class="td-day td-empty"></td>
+      <td class="td-day td-empty"></td>
+    </tr>
+
+    <!-- 15:00 -->
     <tr>
       <td class="td-time">15:00</td>
+      <td class="td-day">
+        <span class="chip c-amber">Matemática Aplicada II <small style="opacity:.7">(hasta 15:00)</small></span>
+      </td>
+      <td class="td-day">
+        <span class="chip c-amber">Matemática Aplicada II <small style="opacity:.7">(hasta 15:00)</small></span>
+      </td>
+      <td class="td-day">
+        <a class="chip c-amber" href="https://us02web.zoom.us/j/83877463385?pwd=8pom6Xcn7gntWTPO47X4qa52jCu8rB.1" target="_blank">Electrónica Analógica Aplicada I</a>
+      </td>
+      <td class="td-day td-empty"></td>
+      <td class="td-day td-empty"></td>
+    </tr>
+
+    <!-- 16:00 -->
+    <tr>
+      <td class="td-time">16:00</td>
       <td class="td-day td-empty"></td>
       <td class="td-day td-empty"></td>
       <td class="td-day">
-        <a class="chip c-amber" href="https://us02web.zoom.us/j/83877463385?pwd=8pom6Xcn7gntWTPO47X4qa52jCu8rB.1" target="_blank">Electrónica Analógica Aplicada I <small style="opacity:.7">(15:00-18:00)</small></a>
+        <a class="chip c-amber" href="#">Electrónica Analógica Aplicada I</a>
       </td>
       <td class="td-day td-empty"></td>
       <td class="td-day td-empty"></td>
     </tr>
 
-    <!-- 17:00 - 18:00 -->
+    <!-- 17:00 -->
     <tr>
       <td class="td-time">17:00</td>
       <td class="td-day">
-        <a class="chip c-amber" href="#" target="_blank">Taller de Laboratorio Tecnológico II <small style="opacity:.7">(17:30-19:30 Presencial)</small></a>
+        <a class="chip c-amber" href="#">Taller de Laboratorio Tecnológico II <small style="opacity:.7">(Presencial 17:30)</small></a>
       </td>
       <td class="td-day">
-        <a class="chip c-pink" href="https://us02web.zoom.us/j/81639876777?pwd=H63NbbkvlpybDoRPFDamMp7elShmRb.1" target="_blank">Inglés Técnico I (Ciber) <small style="opacity:.7">(17:00-18:30)</small></a>
+        <a class="chip c-pink" href="https://us02web.zoom.us/j/81639876777?pwd=H63NbbkvlpybDoRPFDamMp7elShmRb.1" target="_blank">Inglés Técnico I</a>
       </td>
       <td class="td-day">
-        <a class="chip c-amber" href="#" target="_blank">Electrónica Analógica Aplicada I</a>
+        <span class="chip c-amber">Electrónica Analógica Aplicada I <small style="opacity:.7">(hasta 18:00)</small></span>
       </td>
       <td class="td-day">
-        <a class="chip c-pink" href="#" target="_blank">Inglés Técnico I (Ciber) <small style="opacity:.7">(17:00-18:30)</small></a>
-        <a class="chip c-amber" href="https://us02web.zoom.us/j/85679753726?WfSb7JFYvuMgjN5cGNaz0HOdCisInf.1" target="_blank">Introducción a los Sist. Tecnológicos Ind. <small style="opacity:.7">(17:00-19:00)</small></a>
+        <a class="chip c-pink" href="https://us02web.zoom.us/j/81639876777?pwd=H63NbbkvlpybDoRPFDamMp7elShmRb.1" target="_blank">Inglés Técnico I</a>
+        <a class="chip c-amber" href="https://us02web.zoom.us/j/85679753726?pwd=WfSb7JFYvuMgjN5cGNaz0HOdCisInf.1" target="_blank">Introducción a los Sistemas Tecnológicos Ind.</a>
       </td>
       <td class="td-day">
-        <a class="chip c-navy" href="https://us02web.zoom.us/j/83706212417?pwd=5YmJSqMfwdt2qyxBeWHxTpNepdK1Am.1" target="_blank">Bases de Datos SQL y NoSQL <small style="opacity:.7">(17:30-20:00)</small></a>
+        <a class="chip c-navy" href="#">Bases de Datos SQL y NoSQL <small style="opacity:.7">(desde 17:30)</small></a>
       </td>
     </tr>
 
-    <!-- 18:00 - 19:00 -->
+    <!-- 18:00 -->
     <tr>
       <td class="td-time">18:00</td>
       <td class="td-day">
-        <a class="chip c-amber" href="#" target="_blank">Taller de Laboratorio Tecnológico II</a>
-        <a class="chip c-pink" href="https://us02web.zoom.us/j/87061333553?pwd=J4xgUg0saipqIr3qBu5OUY7KrUsJOQ.1" target="_blank">Programación para Seguridad Informática <small style="opacity:.7">(18:00-20:00)</small></a>
+        <a class="chip c-pink" href="https://us02web.zoom.us/j/87061333553?pwd=J4xgUg0saipqIr3qBu5OUY7KrUsJOQ.1" target="_blank">Programación para Seguridad Informática</a>
+        <a class="chip c-amber" href="#">Taller de Laboratorio Tecnológico II</a>
       </td>
       <td class="td-day">
-        <a class="chip c-pink" href="#" target="_blank">Inglés Técnico I (Ciber)</a>
+        <a class="chip c-pink" href="#">Inglés Técnico I <small style="opacity:.7">(hasta 18:30)</small></a>
       </td>
       <td class="td-day">
-        <a class="chip c-amber" href="https://us02web.zoom.us/j/84114710137?pwd=QZILGHb8rl29iDHMT7gwh8n0Rvo6DX.1" target="_blank">Programación para Sist. Tecnológicos <small style="opacity:.7">(08:00-11:00 hs)</small></a>
-        <a class="chip c-pink" href="#" target="_blank">Programación para Seguridad Informática <small style="opacity:.7">(18:00-20:00)</small></a>
-        <a class="chip c-navy" href="#" target="_blank">Programación II (Estructuras y APIs) <small style="opacity:.7">(18:00-19:30)</small></a>
+        <a class="chip c-pink" href="https://us02web.zoom.us/j/87061333553?pwd=J4xgUg0saipqIr3qBu5OUY7KrUsJOQ.1" target="_blank">Programación para Seguridad Informática</a>
+        <a class="chip c-navy" href="#">Programación II (Estructuras de Datos y APIs)</a>
       </td>
       <td class="td-day">
-        <a class="chip c-pink" href="#" target="_blank">Inglés Técnico I (Ciber)</a>
-        <a class="chip c-amber" href="#" target="_blank">Introducción a los Sist. Tecnológicos Ind.</a>
-        <a class="chip c-pink" href="https://us02web.zoom.us/j/88619362913?pwd=5LFae89OqCYLhUhJtaXhMvpn3ciCld.1" target="_blank">Redes y Protocolos de Comunicación <small style="opacity:.7">(18:30-21:30)</small></a>
+        <a class="chip c-pink" href="#">Inglés Técnico I <small style="opacity:.7">(hasta 18:30)</small></a>
+        <a class="chip c-pink" href="https://us02web.zoom.us/j/88619362913?pwd=5LFae89OqCYLhUhJtaXhMvpn3ciCld.1" target="_blank">Redes y Protocolos de Comunicación <small style="opacity:.7">(desde 18:30)</small></a>
+        <a class="chip c-amber" href="#">Introducción a los Sistemas Tecnológicos Ind.</a>
       </td>
       <td class="td-day">
-        <a class="chip c-navy" href="#" target="_blank">Bases de Datos SQL y NoSQL</a>
+        <a class="chip c-navy" href="#">Bases de Datos SQL y NoSQL</a>
       </td>
     </tr>
 
-    <!-- 19:00 - 20:00 -->
+    <!-- 19:00 -->
     <tr>
       <td class="td-time">19:00</td>
       <td class="td-day">
-        <a class="chip c-pink" href="#" target="_blank">Programación para Seguridad Informática</a>
-        <a class="chip c-green" href="https://us02web.zoom.us/j/84023804578?pwd=wKPvBLH05xxLGTxebWRDH0aswZ45Qb.1" target="_blank">Inglés Técnico I (DevOps) <small style="opacity:.7">(19:00-21:00)</small></a>
+        <a class="chip c-green" href="https://us02web.zoom.us/j/84023804578?pwd=wKPvBLH05xxLGTxebWRDH0aswZ45Qb.1" target="_blank">Inglés Técnico I</a>
+        <a class="chip c-pink" href="#">Programación para Seguridad Informática</a>
+        <span class="chip c-amber">Taller de Laboratorio Tecnológico II <small style="opacity:.7">(hasta 19:30)</small></span>
       </td>
       <td class="td-day">
-        <a class="chip c-green" href="https://us02web.zoom.us/j/87394294285?pwd=A6kKT2NEREU2LeAu2HEeaQjrCwWEvy.1" target="_blank">Programación para Automatización II <small style="opacity:.7">(19:00-20:30)</small></a>
+        <a class="chip c-green" href="https://us02web.zoom.us/j/87394294285?pwd=A6kKT2NEREU2LeAu2HEeaQjrCwWEvy.1" target="_blank">Programación para Automatización II</a>
       </td>
       <td class="td-day">
-        <a class="chip c-pink" href="#" target="_blank">Programación para Seguridad Informática</a>
-        <a class="chip c-navy" href="#" target="_blank">Programación II (Estructuras y APIs)</a>
-        <a class="chip c-green" href="https://us02web.zoom.us/j/86979741705?pwd=apCuEPpnX2vdnGJm9JSF74dtvwFXH2.1" target="_blank">Virtualización y Cloud Fundamentals <small style="opacity:.7">(19:00-22:00)</small></a>
+        <a class="chip c-green" href="https://us02web.zoom.us/j/86979741705?pwd=apCuEPpnX2vdnGJm9JSF74dtvwFXH2.1" target="_blank">Virtualización y Cloud Fundamentals</a>
+        <a class="chip c-pink" href="#">Programación para Seguridad Informática</a>
+        <a class="chip c-navy" href="#">Programación II (Estructuras de Datos y APIs) <small style="opacity:.7">(hasta 19:30)</small></a>
       </td>
       <td class="td-day">
-        <a class="chip c-pink" href="#" target="_blank">Redes y Protocolos de Comunicación</a>
-        <a class="chip c-green" href="#" target="_blank">Programación para Automatización II <small style="opacity:.7">(19:00-20:30)</small></a>
+        <a class="chip c-green" href="https://us02web.zoom.us/j/87394294285?pwd=A6kKT2NEREU2LeAu2HEeaQjrCwWEvy.1" target="_blank">Programación para Automatización II</a>
+        <a class="chip c-pink" href="#">Redes y Protocolos de Comunicación</a>
+        <span class="chip c-amber">Introducción a los Sistemas Tecnológicos Ind. <small style="opacity:.7">(hasta 19:00)</small></span>
       </td>
       <td class="td-day">
-        <a class="chip c-navy" href="#" target="_blank">Bases de Datos SQL y NoSQL</a>
-        <a class="chip c-green" href="https://us02web.zoom.us/j/84190123807?pwd=D8Hqa7MZPeQbSlzkyGaBHCTUZWE2M6.1" target="_blank">Seguridad en Infraestructura y Networking Cloud <small style="opacity:.7">(19:00-22:00)</small></a>
+        <a class="chip c-green" href="https://us02web.zoom.us/j/84190123807?pwd=D8Hqa7MZPeQbSlzkyGaBHCTUZWE2M6.1" target="_blank">Seguridad en Infraestructura y Networking Cloud</a>
+        <span class="chip c-navy">Bases de Datos SQL y NoSQL</span>
       </td>
     </tr>
 
-    <!-- 20:00 - 21:00 -->
+    <!-- 20:00 -->
     <tr>
       <td class="td-time">20:00</td>
       <td class="td-day">
-        <a class="chip c-green" href="#" target="_blank">Inglés Técnico I (DevOps)</a>
-        <a class="chip c-pink" href="https://us02web.zoom.us/j/82357450197?pwd=5FHEUgCTbEbi5llbJ5787gklK6DghJ.1" target="_blank">Práctica Profesional II: Redes <small style="opacity:.7">(20:30-22:30)</small></a>
+        <a class="chip c-green" href="#">Inglés Técnico I</a>
+        <span class="chip c-pink">Programación para Seguridad Informática <small style="opacity:.7">(hasta 20:00)</small></span>
+        <a class="chip c-pink" href="https://us02web.zoom.us/j/82357450197?pwd=5FHEUgCTbEbi5llbJ5787gklK6DghJ.1" target="_blank">Práctica Profesional II <small style="opacity:.7">(desde 20:30)</small></a>
       </td>
       <td class="td-day">
-        <a class="chip c-green" href="#" target="_blank">Programación para Automatización II</a>
+        <a class="chip c-green" href="#">Programación para Automatización II <small style="opacity:.7">(hasta 20:30)</small></a>
       </td>
       <td class="td-day">
-        <a class="chip c-green" href="#" target="_blank">Virtualización y Cloud Fundamentals</a>
-        <a class="chip c-pink" href="#" target="_blank">Práctica Profesional II: Redes <small style="opacity:.7">(20:30-22:30)</small></a>
+        <a class="chip c-green" href="#">Virtualización y Cloud Fundamentals</a>
+        <span class="chip c-pink">Programación para Seguridad Informática <small style="opacity:.7">(hasta 20:00)</small></span>
+        <a class="chip c-pink" href="https://us02web.zoom.us/j/82357450197?pwd=5FHEUgCTbEbi5llbJ5787gklK6DghJ.1" target="_blank">Práctica Profesional II <small style="opacity:.7">(desde 20:30)</small></a>
       </td>
       <td class="td-day">
-        <a class="chip c-pink" href="#" target="_blank">Redes y Protocolos de Comunicación</a>
-        <a class="chip c-green" href="#" target="_blank">Programación para Automatización II</a>
+        <a class="chip c-green" href="#">Programación para Automatización II <small style="opacity:.7">(hasta 20:30)</small></a>
+        <a class="chip c-pink" href="#">Redes y Protocolos de Comunicación</a>
       </td>
       <td class="td-day">
-        <a class="chip c-green" href="#" target="_blank">Seguridad en Infraestructura y Networking Cloud</a>
+        <a class="chip c-green" href="#">Seguridad en Infraestructura y Networking Cloud</a>
+        <span class="chip c-navy">Bases de Datos SQL y NoSQL <small style="opacity:.7">(hasta 20:00)</small></span>
       </td>
     </tr>
 
-    <!-- 21:00 - 22:00 -->
+    <!-- 21:00 -->
     <tr>
       <td class="td-time">21:00</td>
       <td class="td-day">
-        <a class="chip c-pink" href="#" target="_blank">Práctica Profesional II: Redes</a>
+        <span class="chip c-green">Inglés Técnico I <small style="opacity:.7">(hasta 21:00)</small></span>
+        <a class="chip c-pink" href="#">Práctica Profesional II</a>
       </td>
       <td class="td-day td-empty"></td>
       <td class="td-day">
-        <a class="chip c-green" href="#" target="_blank">Virtualización y Cloud Fundamentals</a>
-        <a class="chip c-pink" href="#" target="_blank">Práctica Profesional II: Redes</a>
+        <a class="chip c-green" href="#">Virtualización y Cloud Fundamentals</a>
+        <a class="chip c-pink" href="#">Práctica Profesional II</a>
       </td>
-      <td class="td-day td-empty"></td>
       <td class="td-day">
-        <a class="chip c-green" href="#" target="_blank">Seguridad en Infraestructura y Networking Cloud</a>
+        <a class="chip c-pink" href="#">Redes y Protocolos de Comunicación <small style="opacity:.7">(hasta 21:30)</small></a>
+      </td>
+      <td class="td-day">
+        <a class="chip c-green" href="#">Seguridad en Infraestructura y Networking Cloud</a>
       </td>
     </tr>
 
-    <!-- 22:00 - 22:30 -->
+    <!-- 22:00 -->
     <tr>
       <td class="td-time">22:00</td>
       <td class="td-day">
-        <a class="chip c-pink" href="#" target="_blank">Práctica Profesional II: Redes <small style="opacity:.7">(hasta 22:30)</small></a>
+        <span class="chip c-pink">Práctica Profesional II <small style="opacity:.7">(hasta 22:30)</small></span>
       </td>
       <td class="td-day td-empty"></td>
       <td class="td-day">
-        <a class="chip c-pink" href="#" target="_blank">Práctica Profesional II: Redes <small style="opacity:.7">(hasta 22:30)</small></a>
+        <span class="chip c-green">Virtualización y Cloud Fundamentals <small style="opacity:.7">(hasta 22:00)</small></span>
+        <span class="chip c-pink">Práctica Profesional II <small style="opacity:.7">(hasta 22:30)</small></span>
       </td>
       <td class="td-day td-empty"></td>
-      <td class="td-day td-empty"></td>
+      <td class="td-day">
+        <span class="chip c-green">Seguridad en Infraestructura y Networking Cloud <small style="opacity:.7">(hasta 22:00)</small></span>
+      </td>
     </tr>
 
   </tbody>
